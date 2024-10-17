@@ -527,8 +527,13 @@ h3.my-profession
     font-size: 16px;
     text-align: justify;
     color: var(--text-black-700);
+    white-space: pre-line;
 }
 /* service */
+.service .container
+{
+    padding-bottom: 40px;
+}
 .service .service-item
 {
     margin-bottom: 30px;
@@ -553,7 +558,10 @@ h3.my-profession
     height: 60px;
     width: 60px;
     border-radius: 50%;
-    display: 0 auto 30px;
+    /*display: 0 auto 30px;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0 auto 30px;
     text-align: center;
     transition: all 0.3s ease;
@@ -567,6 +575,15 @@ h3.my-profession
     line-height: 60px;
     color: var(--skin-color);
 }
+
+.service .service-item .service-item-inner .icon .fac /* IMAGEN DE POSTMAN */
+{
+    width: 40px;
+    height: 40px;
+    filter: invert(27%) sepia(78%) saturate(3620%) hue-rotate(340deg) brightness(97%) contrast(105%);
+    display: block; 
+}
+
 .service .service-item .service-item-inner:hover .icon
 {
     background: var(--skin-color);
@@ -578,4 +595,67 @@ h3.my-profession
 {
     font-size: 25px;
     color: #ffffff;
+}
+.service .service-item .service-item-inner:hover .icon .fac /* IMAGEN DE POSTMAN CAMBIO HOVER */
+{
+    width: 28px;                 
+    height: auto;                  
+    filter: brightness(0) invert(1);
+}
+.service .service-item .service-item-inner h4 
+{
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: var(--text-black-900);
+    font-weight: 700;
+    text-transform: capitalize;
+}
+.service .service-item .service-item-inner p
+{
+    font-size: 16px;
+    color: var(--text-black-700);
+    line-height: 25px;
+    transition: transform 0.3s ease, color 0.3s ease;
+    
+    
+}
+.service .service-item .service-item-inner p:hover
+{
+    color: #333; 
+    font-weight: bold; 
+    transform: scale(1.05);
+}
+/*Portafolio*/
+.portfolio .container
+{
+    padding-bottom: 40px;
+}
+.portfolio .portfolio-heading
+{
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 40px;
+}
+.portfolio .portfolio-heading h2
+{
+    color: var(--text-black-900);
+    font-weight: 500;
+}
+.portfolio .portfolio-item
+{
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    margin-bottom: 30px;
+}
+.portfolio .portfolio-item-inner
+{
+    border: 6px solid var(--bg-black-100);
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.portfolio .portfolio-item-inner .portfolio-img img 
+{
+    width: 100%;
+    display: block;
 }
