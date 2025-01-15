@@ -109,7 +109,7 @@
                                     </div>
                                     <div class="row">
                                         <div class="buttons padd-15">
-                                            <a href="#" class="btn">Descargar </a>
+                                            <a href="#" class="btn">Descargar CV</a>
                                             <a href="#contact" class="btn hire-me">Hire me</a>
                                         </div>
                                     </div>
@@ -161,7 +161,12 @@
                                                     </h3>
                                                     <h4 class="timeline-title">Unidad Profesional Interdisciplinaria de Ingeniería 
                                                         y Ciencias Sociales y Administrativas (UPIICSA)</h4>
-                                                    <p class="timeline-text">Título: Carta Pasante Ingeniería Informática</p>
+                                                    <p class="timeline-text">Título: Carta Pasante Ingeniería Informática
+                                                        <!-- Botón de descarga -->
+                                                        <a href="ruta/del/documento.pdf" download class="btn-download">
+                                                            <i class="fa fa-download"></i> Descargar
+                                                        </a>
+                                                    </p>
                                                 </div>
                                                 <!-- ==== timeline item ==== -->
                                                 <div class="timeline-item">
@@ -170,7 +175,12 @@
                                                         <i class="fa fa-calendar"></i> 2011 - 2015
                                                     </h3>
                                                     <h4 class="timeline-title">Vocacional 3</h4>
-                                                    <p class="timeline-text">Título: Certificado</p>
+                                                    <p class="timeline-text">Título: Certificado
+                                                        <!-- Botón de descarga -->
+                                                        <a href="ruta/del/certificado.pdf" download class="btn-download">
+                                                            <i class="fa fa-download"></i> Descargar
+                                                        </a>
+                                                    </p>
                                                 </div>
                                                 <!-- ==== timeline item ==== -->
                                                 
@@ -412,7 +422,7 @@
                         <!-- === Portfolio item end ====-->
                         <!-- === Portfolio item start ====-->
                         <div class="portfolio-item padd-15">
-                            <div class="portfolio-item-inner shadow-dark">
+                            <div class="portfolio-item-inner shadow-dark" onclick="openModal()">
                                 <div class="portfolio-img">
                                     <img src="images/auto3.jpg" alt="">
                                 </div>
@@ -423,11 +433,42 @@
                 </div>
             </section>
             <!-- ===  Portfolio Section End ===  -->
+            <!-- ===  Contact Us Section Start ===  -->+
+
+
+            <!-- ===  Contact Us Section End ===  -->
+            
+
+
+
+
+
+            <!-- === Codigo para hacer slide en las imagenes del portafolio === -->
+            <!-- === Modal for Image Slider START === -->
+            <div id="imageModal" class="modal">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <div class="modal-content">
+                    <div class="mySlides">
+                        <img src="images/auto3.jpg" alt="">
+                    </div>
+                    <div class="mySlides">
+                        <img src="images/auto4.jpg" alt="">
+                    </div>
+                    <div class="mySlides">
+                        <img src="images/auto5.jpeg" alt="">
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+            </div>
+            <!-- === Modal for Image Slider END === -->
         </div>
         <!-- Main content End -->
     </div>
     <!-- Main Container End -->
     <!-- JS Files -->
     <script src="./js/script.js"></script>
+
+
 </body>
 </html>

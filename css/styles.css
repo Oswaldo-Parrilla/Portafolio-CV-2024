@@ -529,7 +529,31 @@ h3.my-profession
     color: var(--text-black-700);
     white-space: pre-line;
 }
-/* service */
+
+/* Boton descarga de certificados */
+.timeline .timeline-item .btn-download {
+    font-size: 14px; /* Tamaño de fuente más pequeño */
+    font-weight: 500; /* Grosor del texto */
+    padding: 5px 15px; /* Menor padding para reducir el tamaño del botón */
+    color: white; /* Color del texto */
+    border-radius: 20px; /* Bordes redondeados más ajustados */
+    display: inline-block; /* Para que el ancho se ajuste al contenido */
+    white-space: nowrap;
+    border: none; /* Sin borde */
+    background: #ff0000; /* Fondo rojo */
+    transition: all 0.3s ease; /* Transición suave */
+    margin-top: 10px; /* Espacio entre el texto y el botón */
+    text-align: center; /* Alineación del texto en el centro */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.timeline .timeline-item .btn-download:hover {
+    transform: scale(1.05); /* Efecto de hover: agrandado */
+    background-color: #cc0000; /* Fondo ligeramente más oscuro al hacer hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada al hacer hover */
+}
+
+/* Sobre mi */
 .service .container
 {
     padding-bottom: 40px;
@@ -659,3 +683,94 @@ h3.my-profession
     width: 100%;
     display: block;
 }
+
+
+/* Estilos para el Modal */
+.modal {
+    display: none; /* El modal está oculto por defecto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    perspective: 1500px;
+    visibility: visible; /* Asegúrate de que el contenido del modal sea visible */
+}
+
+.mySlides {
+    position: absolute;
+    width: 60%;
+    opacity: 0;
+    transition: transform 0.8s, opacity 0.8s;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    visibility: visible; /* Asegúrate de que las imágenes sean visibles */
+}
+
+.active {
+    opacity: 1;
+    visibility: visible; /* Esta clase debe asegurarse de que la imagen activa sea visible */
+    transform: translateZ(250px);
+}
+
+.mySlides.prev-slide {
+    transform: rotateY(45deg) translateZ(150px);
+    opacity: 0.7;
+}
+
+.mySlides.next-slide {
+    transform: rotateY(-45deg) translateZ(150px);
+    opacity: 0.7;
+}
+
+.mySlides img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    user-select: none;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: red;
+}
+
+
